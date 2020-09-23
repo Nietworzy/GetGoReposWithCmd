@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+if [[ $1 == "" ]]
+then
+	echo "null is not a repository!"
+	exit 1
+else
+	echo "Downloading files from repository $1..."
+	git clone $1
+	echo "Downloaded files from repository $1."
+	exit 0
+fi
